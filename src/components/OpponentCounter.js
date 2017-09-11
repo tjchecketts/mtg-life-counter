@@ -1,6 +1,6 @@
 import React from 'react';
 
-class LifeCounter extends React.Component {
+class OpponentCounter extends React.Component {
   state = { value: 20 }
   
   minusThree = () => {
@@ -30,7 +30,7 @@ class LifeCounter extends React.Component {
   render() {
     return (
       <div>
-        <h2>Your Health: {this.state.value}</h2>
+        <h2>Opponent's Health: {this.state.value}</h2>
         <button style={{backgroundColor: 'orange', margin: 5, padding: 5}} 
                       onClick={this.minusThree}>- 3</button>
         <button style={{backgroundColor: 'orange', margin: 5, padding: 5}} 
@@ -49,4 +49,4 @@ class LifeCounter extends React.Component {
   }
 }
 
-export default LifeCounter;
+export default OpponentCounter;
