@@ -8,7 +8,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <img src={logo} className="App-logo" alt="MTG mana - white logo" />
           <h2>TJ's React Practice</h2>
         </div>
         <LifeCounter />
