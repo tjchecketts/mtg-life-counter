@@ -23,14 +23,18 @@
   to { transform: rotate(360deg); }
 }
 
-.orange-button {
-  background-color: orange;
-  margin: 5px; 
-  padding: 5px;
+.button {
+  margin: 3px; 
+  padding: 9px;
+  border-radius: 30%;
+  color: white;
 }
 
-.green-button {
-  background-color: lightgreen;
-  margin: 5px; 
-  padding: 5px;
+.green {
+  background-color: rgba(108, 142, 35, 0.9);
+
+}
+
+.orange {
+  background-color: #AF6F00;
 }

@@ -32,33 +32,33 @@ class LifeCounter extends React.Component {
       <div>
         <h2>Your Health: {this.state.value}</h2>
         <button 
-        className='orange-button'
+        className='orange button'
         onClick={this.minusThree}>
         - 3
       </button>
       <button 
-        className='orange-button' 
+        className='orange button' 
         onClick={this.minusTwo}>
         - 2
       </button>
       <button 
-        className='orange-button' 
+        className='orange button' 
         onClick={this.minusOne}>
         - 1
       </button>
       {' '}
       <button 
-        className='green-button' 
+        className='green button' 
         onClick={this.plusOne}>
         + 1
       </button>
       <button 
-        className='green-button' 
+        className='green button' 
         onClick={this.plusTwo}>
         + 2
       </button>
       <button 
-        className='green-button' 
+        className='green button' 
         onClick={this.plusThree}>
         + 3
       </button>
