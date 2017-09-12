@@ -22,3 +22,15 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.orange-button {
+  background-color: orange;
+  margin: 5px; 
+  padding: 5px;
+}
+
+.green-button {
+  background-color: lightgreen;
+  margin: 5px; 
+  padding: 5px;
+}

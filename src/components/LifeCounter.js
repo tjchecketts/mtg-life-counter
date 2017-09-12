@@ -31,19 +31,37 @@ class LifeCounter extends React.Component {
     return (
       <div>
         <h2>Your Health: {this.state.value}</h2>
-        <button style={{backgroundColor: 'orange', margin: 5, padding: 5}} 
-                      onClick={this.minusThree}>- 3</button>
-        <button style={{backgroundColor: 'orange', margin: 5, padding: 5}} 
-                      onClick={this.minusTwo}>- 2</button>
-        <button style={{backgroundColor: 'orange', margin: 5, padding: 5}} 
-                      onClick={this.minusOne}>- 1</button>
-        {' '}
-        <button style={{backgroundColor: 'lightgreen', margin: 5, padding: 5}} 
-                      onClick={this.plusOne}>+ 1</button>
-        <button style={{backgroundColor: 'lightgreen', margin: 5, padding: 5}} 
-                      onClick={this.plusTwo}>+ 2</button>
-        <button style={{backgroundColor: 'lightgreen', margin: 5, padding: 5}} 
-                      onClick={this.plusThree}>+ 3</button>
+        <button 
+        className='orange-button'
+        onClick={this.minusThree}>
+        - 3
+      </button>
+      <button 
+        className='orange-button' 
+        onClick={this.minusTwo}>
+        - 2
+      </button>
+      <button 
+        className='orange-button' 
+        onClick={this.minusOne}>
+        - 1
+      </button>
+      {' '}
+      <button 
+        className='green-button' 
+        onClick={this.plusOne}>
+        + 1
+      </button>
+      <button 
+        className='green-button' 
+        onClick={this.plusTwo}>
+        + 2
+      </button>
+      <button 
+        className='green-button' 
+        onClick={this.plusThree}>
+        + 3
+      </button>
       </div>
     )
   }
