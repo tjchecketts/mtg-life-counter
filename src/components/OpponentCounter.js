@@ -3,6 +3,14 @@ import React from 'react';
 class OpponentCounter extends React.Component {
   state = { value: 20 }
   
+  // changeHealth = (value, direction) => {
+  //   if(direction = 'add') {
+  //     this.setState({ value: this.state + value})
+  //   } else {
+  //     this.setState({ value: this.state - value})
+  //   }
+  // }
+
   minusThree = () => {
     this.setState({ value: this.state.value - 3 })
   }
@@ -33,6 +41,7 @@ class OpponentCounter extends React.Component {
         <h2>Opponent's Health: {this.state.value}</h2>
         <button 
           className='orange button'
+          // onClick={this.setHealth(3, 'add')}>
           onClick={this.minusThree}>
           - 3
         </button>

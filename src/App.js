@@ -14,6 +14,7 @@ class App extends React.Component {
         </div>
         <div>
           <h2> Magic the Gathering: Life Counter</h2>
+          <hr/>
           <LifeCounter />
           <OpponentCounter />
         </div>

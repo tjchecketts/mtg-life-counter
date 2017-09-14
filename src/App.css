@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=MedievalSharp');
+
 .App {
   text-align: center;
+  font-family: 'MedievalSharp', cursive;
 }
 
 .App-logo {
@@ -10,7 +13,7 @@
 .App-header {
   background-color: #222;
   height: 150px;
-  padding: 10px;
+  padding: 22px 5px 0 5px;
   color: white;
 }
 
@@ -28,11 +31,14 @@
   padding: 9px;
   border-radius: 30%;
   color: white;
+  font-family: 'MedievalSharp', cursive;
+  width: 40px;
+  height: 40px;
+  font-size: 12px;
 }
 
 .green {
   background-color: rgba(108, 142, 35, 0.9);
-
 }
 
 .orange {
