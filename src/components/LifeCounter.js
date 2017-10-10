@@ -28,9 +28,10 @@ class LifeCounter extends React.Component {
   }
 
   render() {
+    let yourName = "Your Name Here"
     return (
       <div>
-        <h2>Your Health: {this.state.value}</h2>
+        <h2>({yourName})'s Health: {this.state.value}</h2>
         <button 
         className='orange button'
         onClick={this.minusThree}>

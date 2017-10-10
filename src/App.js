@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import LifeCounter from './components/LifeCounter';
 import OpponentCounter from './components/OpponentCounter';
+import Names from './components/Names';
 
 class App extends React.Component {
   render() {
@@ -15,6 +16,7 @@ class App extends React.Component {
         <div>
           <h2> Magic the Gathering: Life Counter</h2>
           <hr/>
+          <Names />
           <LifeCounter />
           <OpponentCounter />
         </div>

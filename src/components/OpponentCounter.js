@@ -36,9 +36,10 @@ class OpponentCounter extends React.Component {
   }
 
   render() {
+    let opponentName = "Opponenet's Name Here"
     return (
       <div>
-        <h2>Opponent's Health: {this.state.value}</h2>
+        <h2>({opponentName})'s Health: {this.state.value}</h2>
         <button 
           className='orange button'
           // onClick={this.setHealth(3, 'add')}>
