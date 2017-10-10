@@ -27,10 +27,12 @@ class Names extends React.Component {
             id="yourName"
             placeholder="Your Name"
           />
+          <br/>
           <input
             id="opponentName"
             placeholder="Opponent's Name"
           />
+          <br/>
           <button>Update Names</button>
         </form>
       </div>
