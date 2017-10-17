@@ -1,36 +1,37 @@
 import React from 'react';
 
-// state = {yourName, opponentName}
-
 class Names extends React.Component {
 
+  state = { yourName: '', oppName: '' };
 
-
-  // handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   let name = { ...this.state }
-  //   this.props.submit(name)
-  // }
-
-  // handleChange = (e) => {
-  //   let { target: { yourName, opponentName }} = e;
-  // }
+  handleSubmit = e => {
+    e.preventDefault();
+    const { yourName, oppName, name } = this.state;
+    this.setState({ yourName: yourName })
+    this.setState({ oppName: oppName })
+    this.setState({ name: '' }) 
+  }
 
   render() {
-    // let { yourName, opponentName } = this.state;
+    const { yourName, oppName, name } = this.state;
+    
     return (
       <div>
         <br/>
         Enter both names then click Update Names
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <input
+            value={name}
             id="yourName"
             placeholder="Your Name"
+            onChange={ e => this.setState({ yourName: e.target.value }) }
           />
           <br/>
           <input
+            value={name}
             id="opponentName"
             placeholder="Opponent's Name"
+            onChange={ e => this.setState({ oppName: e.target.value }) }
           />
           <br/>
           <button>Update Names</button>
