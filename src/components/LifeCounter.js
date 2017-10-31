@@ -1,7 +1,7 @@
 import React from 'react';
 
 class LifeCounter extends React.Component {
-  state = { value: 20, yourName: '' }
+  state = { value: 20 }
   
   minusThree = () => {
     this.setState({ value: this.state.value - 3 })
@@ -28,37 +28,42 @@ class LifeCounter extends React.Component {
   }
 
   render() {
-    let yourName = "Your"
     return (
       <div>
-        <h2>{yourName} Health: {this.state.value}</h2>
-        <button 
+        <h2>Your Health: {this.state.value}</h2>
+      <button 
+        style={{cursor:'pointer'}}
         className='orange button'
         onClick={this.minusThree}>
         - 3
       </button>
       <button 
+        style={{cursor:'pointer'}}
         className='orange button' 
         onClick={this.minusTwo}>
         - 2
       </button>
       <button 
+        style={{cursor:'pointer'}}
         className='orange button' 
         onClick={this.minusOne}>
         - 1
       </button>
       {' '}
       <button 
+        style={{cursor:'pointer'}}
         className='green button' 
         onClick={this.plusOne}>
         + 1
       </button>
       <button 
+        style={{cursor:'pointer'}}
         className='green button' 
         onClick={this.plusTwo}>
         + 2
       </button>
       <button 
+        style={{cursor:'pointer'}}
         className='green button' 
         onClick={this.plusThree}>
         + 3

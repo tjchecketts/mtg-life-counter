@@ -3,17 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import LifeCounter from './components/LifeCounter';
 import OpponentCounter from './components/OpponentCounter';
-// import Names from './components/Names';
 
 class App extends React.Component {
-
-  // handleSubmit = e => {
-  //   e.preventDefault();
-  //   const { yourName, oppName, name } = this.state;
-  //   this.setState({ yourName: yourName })
-  //   this.setState({ oppName: oppName })
-  //   this.setState({ name: '' }) 
-  // }
 
   render() {
     return (
@@ -25,7 +16,6 @@ class App extends React.Component {
         <div>
           <h2>Life Counter</h2>
           <hr/>
-          {/* <Names /> */}
           <LifeCounter />
           <OpponentCounter />
         </div>
