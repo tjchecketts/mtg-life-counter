@@ -1,10 +1,10 @@
 import React from 'react';
 
 class OpponentCounter extends React.Component {
-  state = { value: 20 }
-
-  minusThree = () => {
-    this.setState({ value: this.state.value - 3 })
+  state = { value: 20, name: '' }
+  
+  handleChange = (e) => {
+    this.setState({ name: e.target.value })
   }
 
   minusTwo = () => {
@@ -30,7 +30,12 @@ class OpponentCounter extends React.Component {
   render() {
     return (
       <div>
-        <h2>Opponent's Health: {this.state.value}</h2>
+        <input
+          placeholder="Opponent's Name"
+          value={this.state.name}
+          onChange={this.handleChange}
+        />
+        <h2>{this.state.name}'s Health: {this.state.value}</h2>
         <button 
           style={{cursor:'pointer'}}
           className='orange button'
