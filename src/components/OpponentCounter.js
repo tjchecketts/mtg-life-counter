@@ -7,6 +7,10 @@ class OpponentCounter extends React.Component {
     this.setState({ name: e.target.value })
   }
 
+  minusThree = () => {
+    this.setState({ value: this.state.value - 3 })
+  }
+
   minusTwo = () => {
     this.setState({ value: this.state.value - 2 })
   }
@@ -35,7 +39,9 @@ class OpponentCounter extends React.Component {
           value={this.state.name}
           onChange={this.handleChange}
         />
-        <h2>{this.state.name}'s Health: {this.state.value}</h2>
+        <h2>{ this.state.name === "" ? "Opponent" : `${this.state.name}` }'s Health: 
+            {this.state.value}
+        </h2>
         <button 
           style={{cursor:'pointer'}}
           className='orange button'

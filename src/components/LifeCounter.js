@@ -39,7 +39,7 @@ class LifeCounter extends React.Component {
           value={this.state.name}
           onChange={this.handleChange}
         />
-        <h2>{this.state.name}'s Health: {this.state.value}</h2>
+        <h2>{ this.state.name === "" ? "Your" : `${this.state.name}'s`} Health: {this.state.value}</h2>
       <button 
         style={{cursor:'pointer'}}
         className='orange button'
