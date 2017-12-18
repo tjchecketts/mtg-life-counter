@@ -32,15 +32,16 @@ class OpponentCounter extends React.Component {
   }
 
   render() {
+    const name = this.state.name;
+    
     return (
       <div>
         <input
           placeholder="Opponent's Name"
-          value={this.state.name}
+          value={name}
           onChange={this.handleChange}
         />
-        <h2>{ this.state.name === "" ? "Opponent" : `${this.state.name}` }'s Health: 
-            {this.state.value}
+        <h2>{ name === "" ? "Opponent" : `${name}` }'s Health: {this.state.value}
         </h2>
         <button 
           style={{cursor:'pointer'}}

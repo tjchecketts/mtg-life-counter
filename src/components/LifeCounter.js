@@ -32,14 +32,16 @@ class LifeCounter extends React.Component {
   }
 
   render() {
+    const name = this.state.name;
+
     return (
       <div>
         <input
           placeholder="Your Name"
-          value={this.state.name}
+          value={name}
           onChange={this.handleChange}
         />
-        <h2>{ this.state.name === "" ? "Your" : `${this.state.name}'s`} Health: {this.state.value}</h2>
+        <h2>{ name === "" ? "Your" : `${name}'s`} Health: {this.state.value}</h2>
       <button 
         style={{cursor:'pointer'}}
         className='orange button'
