@@ -1,4 +1,5 @@
 import React from 'react';
+import { neg, pos } from '../utils/index';
 
 class OpponentCounter extends React.Component {
   state = { value: 20, name: '' }
@@ -13,7 +14,7 @@ class OpponentCounter extends React.Component {
 
   render() {
     const name = this.state.name;
-    
+
     return (
       <div>
         <input
@@ -22,52 +23,34 @@ class OpponentCounter extends React.Component {
           onChange={this.handleChange}
         />
         <h2>
-          { name === "" ? "Opponent" : `${name}` }'s Health: 
-          {this.state.value}
+          { name === "" ? "Opponent" : `${name}` }'s Health: {this.state.value}
         </h2>
-        <button 
-          style={{cursor:'pointer'}}
-          className='orange button'
-          onClick={() => {this.setHealth(-3)}}
-        >
-          - 3
-        </button>
-        <button 
-          style={{cursor:'pointer'}}
-          className='orange button' 
-          onClick={() => {this.setHealth(-2)}}
-        >
-          - 2
-        </button>
-        <button 
-          style={{cursor:'pointer'}}
-          className='orange button' 
-          onClick={() => {this.setHealth(-1)}}
-        >
-          - 1
-        </button>
+        { neg.map( (i) => {
+          return (
+            <button
+              key={i}
+              style={{cursor:'pointer'}}
+              className='orange button'
+              onClick={() => {this.setHealth(-i)}}
+            >
+              {`- ${i}`}
+            </button>
+            )
+        })}
+
         {' '}
-        <button 
-          style={{cursor:'pointer'}}
-          className='green button' 
-          onClick={() => {this.setHealth(1)}}
-        >
-          + 1
-        </button>
-        <button 
-          style={{cursor:'pointer'}}
-          className='green button' 
-          onClick={() => {this.setHealth(2)}}
-        >
-          + 2
-        </button>
-        <button 
-          style={{cursor:'pointer'}}
-          className='green button' 
-          onClick={() => {this.setHealth(3)}}
-        >
-          + 3
-        </button>
+
+        { pos.map( (i) => {
+          return (
+            <button
+              style={{cursor:'pointer'}}
+              className='green button' 
+              onClick={() => {this.setHealth(i)}}
+            >
+              {`+ ${i}`}
+            </button>
+          )
+        })}
       </div>
     )
   }
