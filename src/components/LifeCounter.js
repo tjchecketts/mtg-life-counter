@@ -1,5 +1,6 @@
 import React from 'react';
 import { neg, pos } from '../utils/index';
+import { Input } from 'semantic-ui-react';
 
 class LifeCounter extends React.Component {
   state = { value: 20, name: '' }
@@ -17,14 +18,17 @@ class LifeCounter extends React.Component {
 
     return (
       <div>
-        <input
-          placeholder="Your Name"
-          value={name}
-          onChange={this.handleChange}
-        />
         <h2>
           { name === "" ? "Your" : `${name}'s`} Health: {this.state.value}
         </h2>
+        <div>
+          <Input
+            placeholder="Your Name"
+            value={name}
+            onChange={this.handleChange}
+          />
+        </div>
+        <br />
         { neg.map( (i) => {
           return (
             <button
@@ -43,6 +47,7 @@ class LifeCounter extends React.Component {
         { pos.map( (i) => {
           return (
             <button
+              key={i}
               style={{cursor:'pointer'}}
               className='green button' 
               onClick={() => {this.setHealth(i)}}

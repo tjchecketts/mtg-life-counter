@@ -17,6 +17,7 @@ class App extends React.Component {
           <h2>Life Counter</h2>
           <hr/>
           <LifeCounter />
+          <br />
           <OpponentCounter />
         </div>
       </div>
