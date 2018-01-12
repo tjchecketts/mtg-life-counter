@@ -7,28 +7,8 @@ class LifeCounter extends React.Component {
     this.setState({ name: e.target.value })
   }
 
-  minusThree = () => {
-    this.setState({ value: this.state.value - 3 })
-  }
-
-  minusTwo = () => {
-    this.setState({ value: this.state.value - 2 })
-  }
-
-  minusOne = () => {
-    this.setState({ value: this.state.value - 1 })
-  }
-
-  plusOne = () => {
-    this.setState({ value: this.state.value + 1 })
-  }
-
-  plusTwo = () => {
-    this.setState({ value: this.state.value + 2 })
-  }
-
-  plusThree = () => {
-    this.setState({ value: this.state.value + 3 })
+  setHealth = (value) => {
+    this.setState({ value: this.state.value + value})
   }
 
   render() {
@@ -41,44 +21,53 @@ class LifeCounter extends React.Component {
           value={name}
           onChange={this.handleChange}
         />
-        <h2>{ name === "" ? "Your" : `${name}'s`} Health: {this.state.value}</h2>
-      <button 
-        style={{cursor:'pointer'}}
-        className='orange button'
-        onClick={this.minusThree}>
-        - 3
-      </button>
-      <button 
-        style={{cursor:'pointer'}}
-        className='orange button' 
-        onClick={this.minusTwo}>
-        - 2
-      </button>
-      <button 
-        style={{cursor:'pointer'}}
-        className='orange button' 
-        onClick={this.minusOne}>
-        - 1
-      </button>
-      {' '}
-      <button 
-        style={{cursor:'pointer'}}
-        className='green button' 
-        onClick={this.plusOne}>
-        + 1
-      </button>
-      <button 
-        style={{cursor:'pointer'}}
-        className='green button' 
-        onClick={this.plusTwo}>
-        + 2
-      </button>
-      <button 
-        style={{cursor:'pointer'}}
-        className='green button' 
-        onClick={this.plusThree}>
-        + 3
-      </button>
+        <h2>
+          { name === "" ? "Your" : `${name}'s`} Health: 
+          {this.state.value}
+        </h2>
+        <button 
+          style={{cursor:'pointer'}}
+          className='orange button'
+          onClick={() => {this.setHealth(-3)}}
+        >
+          - 3
+        </button>
+        <button 
+          style={{cursor:'pointer'}}
+          className='orange button' 
+          onClick={() => {this.setHealth(-2)}}
+        >
+          - 2
+        </button>
+        <button 
+          style={{cursor:'pointer'}}
+          className='orange button' 
+          onClick={() => {this.setHealth(-1)}}
+        >
+          - 1
+        </button>
+        {' '}
+        <button 
+          style={{cursor:'pointer'}}
+          className='green button' 
+          onClick={() => {this.setHealth(1)}}
+        >
+          + 1
+        </button>
+        <button 
+          style={{cursor:'pointer'}}
+          className='green button' 
+          onClick={() => {this.setHealth(2)}}
+        >
+          + 2
+        </button>
+        <button 
+          style={{cursor:'pointer'}}
+          className='green button' 
+          onClick={() => {this.setHealth(3)}}
+        >
+          + 3
+        </button>
       </div>
     )
   }
